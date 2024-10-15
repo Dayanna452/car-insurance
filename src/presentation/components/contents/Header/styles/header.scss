@@ -43,21 +43,21 @@
   }
 }
 
-@include respond-to(sm) {
+@include respond-to("sm") {
   .contact__title {
     display: inline-block;
   }
-  .telephone {
+  .contact .telephone {
     &_mobile {
       display: none;
     }
     &_desktop {
-      display: inline-block;
+      display: block;
     }
   }
 }
 
-@include respond-to(md) {
+@include respond-to("md") {
   .header__container-home {
     background-color: transparent;
   }
