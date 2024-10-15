@@ -4,16 +4,13 @@
   width: 100%;
   z-index: 2000;
   &-home {
-    background-color: map-get($colors, "dark-50" );
+    background-color: map-get($colors, "dark-50");
   }
 }
 
 .header__logo {
   width: 92px;
   height: 16px;
-  @include respond-to(md) {
-    width: 99px;
-  }
 }
 
 .contact {
@@ -25,10 +22,6 @@
     line-height: 20px;
     letter-spacing: 0.2px;
     text-align: right;
-
-    @include respond-to(sm) {
-      display: inline-block;
-    }
   }
 
   .telephone {
@@ -44,17 +37,31 @@
       font-size: 20px;
     }
 
-    &_mobile {
-      @include respond-to(sm) {
-        display: none;
-      }
-    }
-
     &_desktop {
       display: none;
-      @include respond-to(sm) {
-        display: inline-block;
-      }
     }
+  }
+}
+
+@include respond-to(sm) {
+  .contact__title {
+    display: inline-block;
+  }
+  .telephone {
+    &_mobile {
+      display: none;
+    }
+    &_desktop {
+      display: inline-block;
+    }
+  }
+}
+
+@include respond-to(md) {
+  .header__container-home {
+    background-color: transparent;
+  }
+  .header__logo {
+    width: 99px;
   }
 }

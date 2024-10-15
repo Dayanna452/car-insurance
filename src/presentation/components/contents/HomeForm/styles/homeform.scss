@@ -34,8 +34,21 @@
 
 @include respond-to("lg") {
   .form {
+    width: 60%;
     button {
       max-width: fit-content;
     }
+  }
+}
+
+@include respond-to("xl") {
+  .form {
+    width: 50%;
+  }
+}
+
+@include respond-to("3xl") {
+  .form {
+    width: 20%;
   }
 }
