@@ -1,7 +1,7 @@
 export interface UserData {
   typeDocument: string
-  document: string
-  phoneNumber: string
+  document?: number
+  phoneNumber?: string
+  plate?: string
   privacy: boolean
-  conditions: boolean
 }

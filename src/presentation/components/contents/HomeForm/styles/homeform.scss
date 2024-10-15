@@ -12,6 +12,15 @@
     color: map-get($colors, "dark-200");
   }
 
+  &__checkbox{
+    font-weight: 300;
+  }
+
+  &__link{
+    color:map-get($colors, "dark-100");
+    text-decoration: underline;
+  }
+
   button {
     width: 100%;
     max-width: 100%;

@@ -23,17 +23,17 @@ export const HomeForm = () => {
   // Verificar si todos los campos están completos
   const isFormComplete: boolean =
     userData.typeDocument !== "" &&
-    userData.document !== "" &&
+    userData.document !== 0 &&
     userData.phoneNumber !== "" &&
     userData.privacy &&
-    userData.conditions;
+    userData.plate !== "";
 
   // Manejar el envío del formulario
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (isFormComplete) {
-      navigate("/plans");
+      navigate("/quotation");
       setUser(data);
       setFormError(null);
     } else {
@@ -64,7 +64,6 @@ export const HomeForm = () => {
             type="number"
             placeholder="Celular"
             name="phoneNumber"
-
             value={userData.phoneNumber}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setUserData({ ...userData, phoneNumber: e.target.value })
@@ -73,12 +72,11 @@ export const HomeForm = () => {
         </div>
         <div className="col-12">
           <Input
-            type="number"
+            name="plate"
             placeholder="Placa"
-            name="phoneNumber"
-            value={userData.phoneNumber}
+            value={userData.plate}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setUserData({ ...userData, phoneNumber: e.target.value })
+              setUserData({ ...userData, plate: e.target.value })
             }
           />
         </div>
@@ -86,8 +84,20 @@ export const HomeForm = () => {
       <div className="d-flex flex-column gap-10">
         <Checkbox
           name="privacy"
+          className="form__checkbox"
           checked={userData.privacy}
-          text="Acepto la Política de Protecciòn de Datos Personales y los Términos y Condiciones."
+          text={
+            <>
+              Acepto la{" "}
+              <a href="/#" className="form__link">
+                <strong>Política de Protección de Datos Personales</strong>
+              </a>{" "}
+              y los{" "}
+              <a href="/#" className="form__link">
+                <strong>Términos y Condiciones</strong>
+              </a>
+            </>
+          }
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setUserData({ ...userData, privacy: e.target.checked })
           }
