@@ -1,6 +1,9 @@
 .header__logo {
-  width: 73.19px;
-  height: 36px;
+  width: 92px;
+  height: 16px;
+  @include respond-to(md) {
+    width: 99px;
+  }
 }
 
 .contact {

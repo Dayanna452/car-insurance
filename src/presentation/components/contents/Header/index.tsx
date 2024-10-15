@@ -9,8 +9,8 @@ export const Header: React.FC = () => {
           className="header__logo"
           src={RimacLogo}
           alt="rimac logo"
-          height={36}
-          width={73.19}
+          height={16}
+          width={92}
         />
         <div className="contact d-flex align-items-center gap-16">
           <b className="contact__title">¡Compra por este medio!</b>
