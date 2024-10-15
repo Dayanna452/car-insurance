@@ -1,0 +1,29 @@
+
+.badge {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 3px 12px;
+  gap: 4px;
+  width: fit-content;
+  max-width: 300px;
+  background-color: map-get($colors, "green-100");
+  border-radius: 4px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  p {
+    font-size: 14px;
+    font-weight: 700;
+    color: map-get($colors, "dark");
+  }
+}
+
+.badge_gradient {
+  background: linear-gradient(86.01deg, map-get($colors, "green-100") 0%, map-get($colors, "green-200") 100%);
+}

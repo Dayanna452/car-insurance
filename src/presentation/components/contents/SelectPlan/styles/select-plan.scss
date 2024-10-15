@@ -1,0 +1,12 @@
+.select-plan {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  align-items: center;
+
+  @include respond-to(md) {
+    flex-direction: row;
+    column-gap: 32px;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,31 @@
+.header__logo {
+  width: 73.19px;
+  height: 36px;
+}
+
+.contact {
+  &__title {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    font-weight: 600;
+    display: none;
+
+    @include respond-to(sm) {
+      display: inline-block;
+    }
+  }
+
+  .telephone {
+    &__icon {
+      font-size: 20px;
+    }
+
+    &__number {
+      font-size: 18px;
+      line-height: 20spx;
+      letter-spacing: 0.4px;
+      font-weight: 700;
+    }
+  }
+}

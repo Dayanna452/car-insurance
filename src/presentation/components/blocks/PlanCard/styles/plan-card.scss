@@ -1,0 +1,69 @@
+.plan-card {
+  width: 288px;
+  height: 662px;
+  box-shadow: 0px 1px 32px 0px rgba(174, 172, 243, 0.35);
+  background-color: map-get($colors, "white");
+  padding: 40px 32px 48px 32px;
+  border-radius: 24px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 16px;
+
+    .header__title {
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 32px;
+      letter-spacing: -0.2px;
+    }
+
+    .header__icon {
+      height: 56px;
+      width: 56px;
+      font-size: 56px;
+    }
+  }
+
+  .subheader__text {
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    color: map-get($colors, "purple-pastel");
+  }
+
+  .subheader__discount {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+    color: map-get($colors, "purple-pastel");
+    text-decoration: line-through;
+  }
+
+  .subheader__price {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+  }
+
+  &__divider {
+    border-color: map-get($colors, "purple-grey");
+    border-width: 1px;
+    margin: 24px 0;
+  }
+
+  &__descriptions {
+    list-style-position: inside;
+
+    & > li {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0.1px;
+    }
+  }
+}
+

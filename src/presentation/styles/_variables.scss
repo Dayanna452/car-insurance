@@ -1,0 +1,60 @@
+
+// Define variables for reusable values
+$input-border-color: #ccc;
+$input-focus-border-color: #3498db;
+$input-background: #f9f9f9;
+$input-text-color: #333;
+$input-error-color: #e74c3c;
+$input-padding: 10px;
+$input-border-radius: 8px;
+
+// Variables de colores
+$colors: (
+  "primary": #ff1c44,
+  "secondary": #2b304e,
+  "purple-100": #ccd1ee,
+  "purple-200":#D7DBF5,
+  "dark": #03050f,
+  "dark-50": #5E6488,
+  "dark-100": #0a051e,
+  "white": #ffffff,
+  "gray-50":#f1f1f1,
+  "green-100": #00f4e2,
+  "green-200": #00ff7f,
+  "green-300": #389e0d,
+  "light-blue":#3498db,
+  "purple-grey": #edeffc,
+  "purple-dark": #4f4fff,
+  "purple-pastel": #7981b2,
+  "purple-night": #141938,
+);
+$text-color: map-get($colors, "dark");
+$background-color: #fafbff;
+
+// Tipografía
+$font-family-base: "Lato", "Noto Sans", sans-serif;
+$font-size-base: 16px;
+
+// Espaciado
+$spacer: 1rem;
+
+// Grid
+$grid-columns: 12;
+
+// Breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  2xl: 1440px,
+  3xl: 1950px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+);

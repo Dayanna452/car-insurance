@@ -1,0 +1,123 @@
+// Mixin para Breakpoints
+@mixin respond-to($breakpoint) {
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+  @if $breakpoint-value != null {
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  }
+}
+
+// Mixin para Flexbox
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin para columnas
+@mixin make-col($columns) {
+  width: calc($columns / $grid-columns * 100%);
+}
+
+// Mixin para gap
+@mixin make-gap($item) {
+  gap: calc($spacer/2 * $item);
+}
+
+// Mixin para height
+@mixin make-height($item) {
+  height: calc($spacer/2 * $item);
+}
+
+// Mixin para espaciado
+@mixin generate-dimension-space($property) {
+  @for $i from 1 through 100 {
+    @if $property == "h" {
+      .#{$property}-#{$i} {
+        height: #{$i} + px;
+      }
+    }
+    @if $property == "w" {
+      .#{$property}-#{$i} {
+        width: #{$i} + px;
+      }
+    }
+  }
+}
+
+@mixin generate-box-space($property) {
+  @for $i from 0 through 100 {
+    @if $property == "p" {
+      .#{$property}-#{$i} {
+        padding: #{$i} + px;
+      }
+    } @else if $property == "px" {
+      .#{$property}-#{$i} {
+        padding-left: #{$i} + px;
+        padding-right: #{$i} + px;
+      }
+    } @else if $property == "py" {
+      .#{$property}-#{$i} {
+        padding-top: #{$i} + px;
+        padding-bottom: #{$i} + px;
+      }
+    } @else if $property == "pt" {
+      .#{$property}-#{$i} {
+        padding-top: #{$i} + px;
+      }
+    } @else if $property == "pr" {
+      .#{$property}-#{$i} {
+        padding-right: #{$i} + px;
+      }
+    } @else if $property == "pb" {
+      .#{$property}-#{$i} {
+        padding-bottom: #{$i} + px;
+      }
+    } @else if $property == "pl" {
+      .#{$property}-#{$i} {
+        padding-left: #{$i} + px;
+      }
+    }
+    @if $property == "m" {
+      .#{$property}-#{$i} {
+        margin: #{$i} + px;
+      }
+    } @else if $property == "mx" {
+      .#{$property}-#{$i} {
+        margin-left: #{$i} + px;
+        margin-right: #{$i} + px;
+      }
+    } @else if $property == "my" {
+      .#{$property}-#{$i} {
+        margin-top: #{$i} + px;
+        margin-bottom: #{$i} + px;
+      }
+    } @else if $property == "mt" {
+      .#{$property}-#{$i} {
+        margin-top: #{$i} + px;
+      }
+    } @else if $property == "mr" {
+      .#{$property}-#{$i} {
+        margin-right: #{$i} + px;
+      }
+    } @else if $property == "mb" {
+      .#{$property}-#{$i} {
+        margin-bottom: #{$i} + px;
+      }
+    } @else if $property == "ml" {
+      .#{$property}-#{$i} {
+        margin-left: #{$i} + px;
+      }
+    }
+  }
+}
+
+@mixin generate-gap-space() {
+  @for $i from 1 through 100 {
+    .gap-#{$i} {
+      gap: #{$i} + px;
+    }
+  }
+}

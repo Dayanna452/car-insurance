@@ -1,0 +1,7 @@
+.document-container {
+  border-radius: 8px;
+  border: 1px solid map-get($colors, "dark-50");
+  .select-container{
+    border-right: 1px solid map-get($colors, "dark-50");
+  }
+}

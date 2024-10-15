@@ -1,0 +1,33 @@
+.plans {
+  margin: 40px 0;
+
+  &__carousel {
+    display: block;
+    width: calc(100vw - 32px);
+
+    .plan-item {
+      width: fit-content;
+    }
+  }
+
+  &__list {
+    display: none;
+  }
+
+  @include respond-to(lg) {
+    &__carousel {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+
+      .plan-item {
+        width: 288px;
+      }
+    }
+  }
+}

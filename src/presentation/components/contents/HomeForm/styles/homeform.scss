@@ -1,0 +1,23 @@
+.form {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  button {
+    width: 100%;
+    max-width: 100%;
+  }
+  .btn_conditions {
+    font-weight: 600;
+    max-width: fit-content;
+    text-decoration: underline;
+  }
+}
+
+@include respond-to("lg") {
+  .form {
+    button {
+      max-width: fit-content;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.stepper__section {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
+  background-color: map-get($colors, "purple-grey");
+
+  @include respond-to(md) {
+    display: flex;
+  }
+}
+
+.stepper__section-mobile {
+  background-color: transparent;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid map-get($colors, "purple-100");
+
+  @include respond-to(md) {
+    display: none;
+  }
+  &--none{
+    display: none;
+  }
+}

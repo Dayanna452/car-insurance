@@ -1,0 +1,62 @@
+.forwho-card {
+  width: 336px;
+  box-shadow: 0px 1px 32px 0px rgba(174, 172, 243, 0.35);
+  background-color: map-get($colors, "white");
+  padding: 16px 24px 40px 24px;
+  cursor: pointer;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+
+  &[data-checked="true"] {
+    border: 3px solid rgba(20, 25, 56, 1);
+  }
+
+  &-radio {
+    font-size: 24px;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+
+    &[data-checked="true"] {
+      color: map-get($colors, "green-300");
+    }
+  }
+
+  &-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    &__icon {
+      height: 32px;
+      width: 32px;
+      font-size: 32px;
+    }
+
+    &__title {
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 28px;
+      letter-spacing: -0.2px;
+    }
+  }
+
+  &__description {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  @include respond-to(md) {
+    width: 256px;
+
+    &-content {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+}

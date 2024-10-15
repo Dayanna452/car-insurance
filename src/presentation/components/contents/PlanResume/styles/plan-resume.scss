@@ -1,0 +1,32 @@
+.plan-resume {
+  gap: 16px;
+  border-radius: 24px;
+  margin-top: 20px;
+  padding: 24px 32px 24px 32px;
+  color: map-get($colors, "purple-night");
+  background-color: map-get($colors, "white");
+  box-shadow: 0px 1px 24px 0px rgba(174, 172, 243, 0.4);
+  &__title {
+    font-size: 10px;
+    font-weight: 900;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  &__user {
+    font-size: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid map-get($colors, "purple-200");
+  }
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.10000000149011612px;
+  }
+}
+
+.plan-details {
+  letter-spacing: 0.1px;
+  line-height: 24px;
+}

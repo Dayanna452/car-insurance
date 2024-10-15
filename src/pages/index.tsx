@@ -1,8 +1,7 @@
+import { HomeContent } from "../presentation/components/layouts/HomeContent";
 
 function Home() {
-  return (
-    <div>Home</div>
-  )
+  return <HomeContent />;
 }
 
-export default Home
+export default Home;

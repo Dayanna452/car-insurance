@@ -1,0 +1,88 @@
+.mx-auto {
+  margin: 0 auto;
+}
+.my-auto {
+  margin: auto 0;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.template {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inline-flex-center {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@include generate-gap-space();
+
+@include generate-dimension-space("h");
+@include generate-dimension-space("w");
+
+@include generate-box-space("p");
+@include generate-box-space("px");
+@include generate-box-space("py");
+@include generate-box-space("pt");
+@include generate-box-space("pr");
+@include generate-box-space("pb");
+@include generate-box-space("pl");
+
+@include generate-box-space("m");
+@include generate-box-space("mx");
+@include generate-box-space("my");
+@include generate-box-space("mt");
+@include generate-box-space("mr");
+@include generate-box-space("mb");
+@include generate-box-space("ml");
