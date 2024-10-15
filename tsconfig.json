@@ -1,4 +1,9 @@
-{
+{"compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "~react-pages": ["path/to/react-pages"]
+    }
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

@@ -1,0 +1,70 @@
+.button__container {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+
+  & > svg {
+    font-size: 24px;
+  }
+
+  &:disabled{
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  &[data-variant="text"] {
+    background-color: transparent;
+
+    &[data-color="primary"] {
+      color: map-get($colors, "primary");
+    }
+
+    &[data-color="purple-dark"] {
+      color: map-get($colors, "purple-dark");
+    }
+
+    &[data-color="dark"] {
+      color: map-get($colors, "dark");
+    }
+  }
+
+  &[data-variant="contained"] {
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+
+    &[data-color="primary"] {
+      background-color: map-get($colors, "primary");
+      color: map-get($colors, "white");
+    }
+
+    &[data-color="purple-dark"] {
+      background-color: map-get($colors, "purple-dark");
+      color: map-get($colors, "white");
+    }
+
+    &[data-color="dark"] {
+      background-color: map-get($colors, "dark");
+      color: map-get($colors, "white");
+    }
+
+    &[data-size="md"] {
+      padding: 14px 32px;
+    }
+
+    &[data-size="lg"] {
+      padding: 18px 40px;
+    }
+
+    &[data-size="lg"] {
+      padding: 20px 40px;
+    }
+
+    &[data-full-width="true"] {
+      width: 100%;
+    }
+  }
+}
