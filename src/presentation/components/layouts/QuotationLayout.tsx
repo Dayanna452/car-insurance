@@ -18,7 +18,7 @@ export const QuotationLayout: FC = () => {
         <section className="quotation-layout__sidebar">
           <Stepper steps={steps} />
         </section>
-        <section className="quotation-layout__content">2</section>
+        <section className="quotation-layout__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, animi accusantium. Quae excepturi quam incidunt aliquam soluta, necessitatibus sequi eum, repellendus eligendi fuga officia eos enim ad error iure dignissimos!</section>
       </main>
     </div>
   );

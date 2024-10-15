@@ -1,11 +1,13 @@
 .quotation-layout {
   display: flex;
+  margin-top: 52px;
 
   &__sidebar {
     width: 30%;
     background-color: #f7f8fc;
     padding-top: 48px;
     display: none;
+    height: calc(100vh - 52px);
 
     @include respond-to(lg) {
       display: block;
@@ -24,5 +26,6 @@
 
   &__content {
     width: 70%;
+    padding: 48px 96px;
   }
 }

@@ -5,6 +5,10 @@
   padding: 52px 0;
   align-items: center;
 
+  &-container {
+    padding-left: 32px;
+  }
+
   &__title {
     font-size: 10px;
     font-weight: 700;
@@ -30,6 +34,9 @@
     line-height: 24px;
     color: map-get($colors, "dark-100");
   }
+}
+.copyright {
+  display: none;
 }
 
 .home-info {
@@ -71,10 +78,42 @@
 @include respond-to("md") {
   .home {
     padding-bottom: 0;
+    &-container {
+      padding-left: 0;
+    }
+    &__instructions{
+      max-width: 70%;
+    }
+    &__insurance {
+      font-size: 36px;
+      line-height: 48px;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
+
+  .copyright {
+    display: block;
+    font-size: 12px;
+    color: map-get($colors, "gray-100");
+    margin-top: 50px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+
   .home-info {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .home__instructions {
+    position: absolute;
+    bottom: -260px;
+    z-index: 2500;
   }
 
   .home__image-container {
@@ -106,7 +145,7 @@
   }
 }
 
-@include respond-to("lg") {
+@include respond-to(lg) {
   .home-container {
     padding-bottom: 0px;
   }
@@ -114,12 +153,14 @@
     display: flex;
     justify-content: center;
   }
-  
 }
 
-@include respond-to("2xl") {
-  .home{
+@include respond-to(3xl) {
+  .home {
     max-width: 1140px;
     margin: auto;
+  }
+  .home__instructions {
+    bottom: -330px;
   }
 }

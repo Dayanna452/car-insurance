@@ -8,18 +8,23 @@ import HomePhoto2 from "@/assets/images/home-photo-2.svg";
 export const HomeContent = () => {
   return (
     <>
-      <Header className="header__container-home" />
+      <Header className="header__container-home border-none" />
       <div className="home">
         <main className="row col-12">
           <section className="home-info col-12 col-md-6 col-lg-5 col-xl-4">
-            <div className="pl-32 col-7 home-container">
-              <h2 className="home__title">¡NUEVO!</h2>
-              <h2 className="home__insurance">
-                Seguro Vehicular <span>Tracking</span>
-              </h2>
-              <p className="home__subtitle">
-                Cuentanos donde le haras seguimiento a tu seguro
-              </p>
+            <div className="col-7 home-container">
+              <div className="home__instructions">
+                <h2 className="home__title">¡NUEVO!</h2>
+                <h2 className="home__insurance">
+                  Seguro Vehicular <span>Tracking</span>
+                </h2>
+                <p className="home__subtitle">
+                  Cuentanos donde le haras seguimiento a tu seguro
+                </p>
+                <span className="copyright">
+                  © 2020 RIMAC Seguros y Reaseguros.
+                </span>
+              </div>
               <div className="home__image-container">
                 <img
                   className="home__image image-desktop"

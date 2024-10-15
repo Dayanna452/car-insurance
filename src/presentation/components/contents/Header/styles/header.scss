@@ -3,9 +3,14 @@
   top: 0;
   width: 100%;
   z-index: 2000;
+  border-bottom: 1px solid map-get($colors, "light-gray");
   &-home {
     background-color: map-get($colors, "dark-50");
   }
+}
+
+.border-none {
+  border: none;
 }
 
 .header__logo {
