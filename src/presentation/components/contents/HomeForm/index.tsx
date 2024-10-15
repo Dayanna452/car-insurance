@@ -8,14 +8,14 @@ import { Checkbox } from "../../blocks/Checkbox";
 import { InputDocument } from "../InputDocument";
 import { ValueLabel } from "../../blocks/Select/types/select";
 //Services
-import { useUsers } from "../../../../services/users";
+import { useUser } from "../../../../services/users";
 //Data
 import { options } from "../../../../data/constants/data";
 import { useUsersData } from "../../../../data/stores/useUsersData";
 
 export const HomeForm = () => {
   const navigate = useNavigate();
-  const { data } = useUsers();
+  const { data } = useUser();
   const { userData, setUserData, setUser } = useUsersData();
   const [formError, setFormError] = useState<string | null>(null);
   const [selectOption, setSelectOption] = useState<ValueLabel>(options[0]);
@@ -52,7 +52,7 @@ export const HomeForm = () => {
             selectOption={selectOption}
             setSelectOption={setSelectOption}
             onChangeDocument={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setUserData({ ...userData, document: e.target.value })
+              setUserData({ ...userData, document: Number(e.target.value) })
             }
             onChangeSelect={(option) => {
               setUserData({ ...userData, typeDocument: option.value });

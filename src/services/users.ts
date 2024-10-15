@@ -17,6 +17,6 @@ const fetchUsers = async () => {
   return data;
 };
 
-export const useUsers = () => {
-  return useQuery<UserType[], Error>("users", fetchUsers);
+export const useUser = () => {
+  return useQuery<UserType, Error>("user", fetchUsers);
 };
