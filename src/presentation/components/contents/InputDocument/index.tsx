@@ -5,35 +5,34 @@ import { ValueLabel } from '../../blocks/Select/types/select'
 interface InputDocumentProps {
   options: ValueLabel[]
   selectOption: ValueLabel
-  onChangeDocument: (e: React.ChangeEvent<HTMLInputElement>) => void
   onChangeSelect: (option: ValueLabel) => void
   setSelectOption: React.Dispatch<React.SetStateAction<ValueLabel>>
-  //onChangeSelect: () => void
+  onChangeDocument: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export const InputDocument = ({
-  onChangeDocument,
-  onChangeSelect,
   options,
   selectOption,
-  setSelectOption
+  onChangeSelect,
+  setSelectOption,
+  onChangeDocument,
 }: InputDocumentProps) => {
   return (
     <div className='row document-container'>
-      <div className='col-6 col-lg-5'>
+      <div className='col-5 col-lg-5'>
         <Select
           options={options}
-          setSelectOption={setSelectOption}
           selectOption={selectOption}
           onChangeSelect={onChangeSelect}
+          setSelectOption={setSelectOption}
         />
       </div>
-      <div className='col-6 col-lg-7'>
+      <div className='col-7 col-lg-7'>
         <Input
-          className='input_simple'
-          label='Nro. de documento'
           type='number'
           name='document'
+          className='input_simple'
+          placeholder='Nro. de doc'
           onChange={onChangeDocument}
         />
       </div>

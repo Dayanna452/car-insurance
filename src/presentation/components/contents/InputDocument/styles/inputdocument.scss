@@ -1,7 +1,8 @@
 .document-container {
-  border-radius: 8px;
-  border: 1px solid map-get($colors, "dark-100");
-  .select-container{
-    border-right: 1px solid map-get($colors, "dark-100");
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid map-get($colors, "gray-100");
+  .select-container {
+    border-right: 1px solid map-get($colors, "gray-100");
   }
 }
