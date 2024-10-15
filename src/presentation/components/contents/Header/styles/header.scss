@@ -1,3 +1,12 @@
+.header__container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  &-home {
+    background-color: map-get($colors, "dark-50" );
+  }
+}
+
 .header__logo {
   width: 92px;
   height: 16px;
@@ -8,11 +17,13 @@
 
 .contact {
   &__title {
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.2px;
-    font-weight: 600;
     display: none;
+    color: map-get($colors, "dark-100");
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    text-align: right;
 
     @include respond-to(sm) {
       display: inline-block;
@@ -20,15 +31,29 @@
   }
 
   .telephone {
+    &__text {
+      color: map-get($colors, "purple-dark");
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 0.4px;
+      font-weight: 400;
+    }
+
     &__icon {
       font-size: 20px;
     }
 
-    &__number {
-      font-size: 18px;
-      line-height: 20spx;
-      letter-spacing: 0.4px;
-      font-weight: 700;
+    &_mobile {
+      @include respond-to(sm) {
+        display: none;
+      }
+    }
+
+    &_desktop {
+      display: none;
+      @include respond-to(sm) {
+        display: inline-block;
+      }
     }
   }
 }

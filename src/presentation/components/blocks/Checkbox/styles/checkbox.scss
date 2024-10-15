@@ -46,8 +46,8 @@ input[type="checkbox"] {
   }
   &:checked {
     color: map-get($colors, "white");
-    border-color: map-get($colors, "dark-100");
-    background: map-get($colors, "dark-100");
+    border-color: map-get($colors, "dark-200");
+    background: map-get($colors, "dark-200");
     &::before {
       opacity: 1;
     }

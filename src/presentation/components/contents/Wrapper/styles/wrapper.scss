@@ -8,32 +8,9 @@
   &__content {
     flex: 1;
     display: flex;
-    padding: 20px 0;
+    padding: 52px 0;
     align-items: center;
-    main {
-      margin: 0 20px;
-    }
   }
-}
-
-.left-blur {
-  /* blur-asset */
-  position: fixed;
-  width: 432px;
-  left: -14%;
-  bottom: -50%;
-  z-index: -1;
-  height: 100%;
-}
-
-.right-blur {
-  /* blur-asset */
-  position: fixed;
-  width: 432px;
-  right: -14%;
-  top: -70%;
-  z-index: -1;
-  height: 100%;
 }
 
 @include respond-to("lg") {
@@ -43,31 +20,5 @@
         margin: 0;
       }
     }
-  }
-  .left-blur {
-    top: 0;
-    left: -8%;
-  }
-  .right-blur {
-    top: 0;
-    right: -8%;
-  }
-}
-
-@include respond-to("xl2") {
-  .left-blur {
-    left: -5%;
-  }
-  .right-blur {
-    right: -5%;
-  }
-}
-
-@include respond-to("xl3") {
-  .left-blur {
-    left: 0;
-  }
-  .right-blur {
-    right: 0;
   }
 }
