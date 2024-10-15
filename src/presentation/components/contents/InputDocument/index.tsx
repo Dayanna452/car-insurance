@@ -20,7 +20,7 @@ export const InputDocument = ({
 }: InputDocumentProps) => {
   return (
     <div className='row document-container'>
-      <div className='col-6 col-lg-5'>
+      <div className='col-5 col-lg-5'>
         <Select
           options={options}
           setSelectOption={setSelectOption}
@@ -28,7 +28,7 @@ export const InputDocument = ({
           onChangeSelect={onChangeSelect}
         />
       </div>
-      <div className='col-6 col-lg-7'>
+      <div className='col-7 col-lg-7'>
         <Input
           className='input_simple'
           label='Nro. de documento'

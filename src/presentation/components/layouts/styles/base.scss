@@ -5,7 +5,31 @@
   padding: 52px 0;
   align-items: center;
 
+  &__title {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.8px;
+    color: map-get($colors, "dark-200");
+  }
 
+  &__insurance {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.6px;
+    color: map-get($colors, "dark-200");
+    span {
+      color: map-get($colors, "primary");
+    }
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: map-get($colors, "dark-100");
+  }
 
   /* &-container {
     padding-bottom: 20px;
@@ -20,8 +44,8 @@
 }
 
 .home-info {
-  display: none;
   justify-content: space-between;
+
   &_mobile {
     display: flex;
     width: 100%;
@@ -31,8 +55,7 @@
     justify-content: center;
     background-color: map-get($colors, "dark-50");
   }
-  
- 
+
   /* span {
     font-weight: 600;
   }
@@ -43,11 +66,11 @@
   } */
 }
 
-.home__title {
+/* .home__title {
   font-size: 28px;
   font-weight: 700;
 }
-
+ */
 .home__image {
   width: fit-content;
   height: 276px;
@@ -64,13 +87,19 @@
   }
 }
 
+@include respond-to("sm") {
+  .home__title {
+    font-size: 12px;
+  }
+}
+
 @include respond-to("md") {
   .home-info {
     display: flex;
     flex-direction: column;
-    &_mobile {
+    /* &_mobile {
       display: none;
-    }
+    } */
   }
   .home-container {
     border: none;
