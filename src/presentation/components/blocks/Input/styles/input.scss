@@ -3,38 +3,38 @@
   height: 100%;
   position: relative;
 }
+
 .input {
   height: 100%;
   width: 100%;
-  padding: 25px 16px 10px;
-  border-radius: 8px;
-  border: 1px solid map-get($colors, "dark-100");
-  color: $input-text-color;
+  padding: 20px 16px;
+  border-radius: 4px;
+  border: 1px solid map-get($colors, "gray-100");
+  color: map-get($colors, "gray-100");
   font-size: 16px;
   outline: none;
   transition: border-color 0.3s ease;
 
   &_simple {
     border: none;
-    border-radius: 0 8px 8px 0;
-  }
+    border-radius: 0 4px 4px 0;
+}
 
   //Hover state
   &:hover {
-    border-color: darken($input-border-color, 10%);
+    border-color: darken(map-get($colors, "gray-100"), 10%);
   }
 
   // Focus state
   &:focus {
     border-color: map-get($colors, "light-blue");
-    //box-shadow: 0 0 5px lighten(map-get($colors, "light-blue"), 20%);
     box-shadow: 0px 1px 32px 0px rgba(174, 172, 243, 0.35);
   }
 
   // Disabled state
   &:disabled {
     background-color: lighten($input-background, 20%);
-    border-color: lighten($input-border-color, 20%);
+    border-color: lighten(map-get($colors, "gray-100"), 20%);
     cursor: not-allowed;
   }
 
@@ -47,7 +47,7 @@
 
   // Placeholder text
   &::placeholder {
-    color: lighten($input-text-color, 30%);
+    color: map-get($colors, "gray-100");
     opacity: 1; // Fix for older browsers
   }
 }

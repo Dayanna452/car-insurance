@@ -1,20 +1,20 @@
 interface InputContainerProps
   extends React.InputHTMLAttributes<HTMLDivElement> {
-  label?: string
+  label?: string;
 }
 
-export const Input = ({ label, className, ...props }: InputContainerProps) => {
+export const Input = ({
+  placeholder,
+  className,
+  ...props
+}: InputContainerProps) => {
   return (
-    <div className='input-container' {...props}>
+    <div className="input-container" {...props}>
       <input
-        className={`input ${className ? className : ''}`}
         type={props.type}
+        placeholder={placeholder || "placeholder"}
+        className={`input ${className ? className : ""}`}
       />
-      {label && (
-        <label className='input-label' htmlFor=''>
-          {label}
-        </label>
-      )}
     </div>
-  )
-}
+  );
+};

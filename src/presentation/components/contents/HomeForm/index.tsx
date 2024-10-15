@@ -1,15 +1,17 @@
+//Libraries
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+//Components
 import { Input } from "../../blocks/Input";
 import { Button } from "../../blocks/Button";
 import { Checkbox } from "../../blocks/Checkbox";
-import { ValueLabel } from "../../blocks/Select/types/select";
 import { InputDocument } from "../InputDocument";
-
+import { ValueLabel } from "../../blocks/Select/types/select";
+//Services
 import { useUsers } from "../../../../services/users";
-import { useUsersData } from "../../../../data/stores/useUsersData";
+//Data
 import { options } from "../../../../data/constants/data";
+import { useUsersData } from "../../../../data/stores/useUsersData";
 
 export const HomeForm = () => {
   const navigate = useNavigate();
@@ -60,8 +62,9 @@ export const HomeForm = () => {
         <div className="col-12">
           <Input
             type="number"
-            label="Celular"
+            placeholder="Celular"
             name="phoneNumber"
+
             value={userData.phoneNumber}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setUserData({ ...userData, phoneNumber: e.target.value })
@@ -71,7 +74,7 @@ export const HomeForm = () => {
         <div className="col-12">
           <Input
             type="number"
-            label="Celular"
+            placeholder="Placa"
             name="phoneNumber"
             value={userData.phoneNumber}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
