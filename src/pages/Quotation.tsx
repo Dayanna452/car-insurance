@@ -1,8 +1,7 @@
+import { QuotationLayout } from "../presentation/components/layouts/QuotationLayout";
 
 function Quotation() {
-  return (
-    <div>Quotation</div>
-  )
+  return <QuotationLayout />;
 }
 
-export default Quotation
+export default Quotation;

@@ -1,0 +1,28 @@
+.quotation-layout {
+  display: flex;
+
+  &__sidebar {
+    width: 30%;
+    background-color: #f7f8fc;
+    padding-top: 48px;
+    display: none;
+
+    @include respond-to(lg) {
+      display: block;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include respond-to(xl) {
+      padding-left: 80px;
+      padding-right: 40px;
+    }
+    @include respond-to(2xl) {
+      padding-left: 120px;
+      padding-right: 64px;
+    }
+  }
+
+  &__content {
+    width: 70%;
+  }
+}

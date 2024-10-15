@@ -1,38 +1,48 @@
-.stepper {
-  &-container {
-    & svg:last-child {
-      display: none;
-    }
-  }
-  &__separator {
+.stepper-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  position: relative;
+
+  &:not(:last-child)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 28px;
+    left: 11px;
+    width: 0;
+    height: 40px;
+    border: 1px solid #e4e8f7;
     border-style: dashed;
   }
+
   &__number {
     width: 24px;
     height: 24px;
     border-radius: 50%;
     background-color: transparent;
-    color: map-get($colors, "purple-pastel");
+    color: #c5cbe0;
     font-size: 12px;
     font-weight: 700;
-    border: 1px solid map-get($colors, "purple-pastel");
+    border: 1px solid #c5cbe0;
   }
 
   &__text {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.2px;
-    color: map-get($colors, "purple-pastel");
+    color: #c5cbe0;
   }
 
   &[data-active="true"] &__number {
-    background-color: map-get($colors, "purple-dark");
+    background-color: #6f7dff;
     color: map-get($colors, "white");
     border: none;
   }
 
   &[data-active="true"] &__text {
-    color: map-get($colors, "purple-night");
+    color: #494f66;
   }
 }

@@ -1,21 +1,29 @@
 .stepper-mobile {
+  display: flex;
+  align-items: center;
+  padding: 12px 32px;
+  border-bottom: 2px solid #f0f2fa;
+
   &__icon {
     font-size: 24px;
-    color: map-get($colors, "purple-pastel");
+    color: #e4e8f7;
+    margin-right: 12px;
   }
 
   &__text {
     font-size: 10px;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 16px;
     letter-spacing: 0.8px;
+    margin-right: 16px;
+    color: #676f8f;
   }
 
   &__progress {
     width: calc(100% - 135px);
     height: 6px;
     border-radius: 20px;
-    background-color: map-get($colors, "purple-100");
+    background-color: #6f7dff;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
